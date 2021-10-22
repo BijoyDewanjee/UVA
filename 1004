@@ -1,0 +1,24 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    while(1)
+    {
+        int n,i,max_ballons=0;;
+        cin>>n;
+        if(n==0)break;
+        map<string,int>ballons;
+        string ballon,colour;
+        for(i=0;i<n;i++)
+        {
+            cin>>ballon;
+            ballons[ballon]++;
+        }
+        for(auto u:ballons)
+        {
+            if(u.second>max_ballons){max_ballons=u.second;colour=u.first;}
+        }
+        cout<<colour<<endl;
+    }
+    return 0;
+}
