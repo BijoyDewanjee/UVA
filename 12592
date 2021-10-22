@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+map<string,string>mp;
+map<string,string>::iterator it;
+int main()
+    {
+        int t,n;
+        cin>>t;
+        getchar();
+        while(t--){
+            string s,m;
+            getline(cin,s);
+            getline(cin,m);
+            mp[s]=m;
+
+        }
+        cin>>n;
+        getchar();
+        while(n--){
+            string s;
+            getline(cin,s);
+            it=mp.find(s);
+            if(it!=mp.end())cout<<it->second<<endl;
+        }
+    }
